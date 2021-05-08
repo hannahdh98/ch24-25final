@@ -1,0 +1,8 @@
+/*css styling. Sets the font to sans serif and the border.*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
