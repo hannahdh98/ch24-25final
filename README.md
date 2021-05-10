@@ -84,18 +84,19 @@ pyvenv.cfg
 # Database
 local
 
-clustermanager
-oplog.rs
-replset.election
-replset.initialSyncId
-replset.minvalid
-replset.oplogTruncateAfterPoint
-startup_log
+- clustermanager
+- oplog.rs
+- replset.election
+- replset.initialSyncId
+- replset.minvalid
+- replset.oplogTruncateAfterPoint
+- startup_log
+
 shop
 
-orders
-posts
-products
-sessions
-shop
-users
+- orders
+- posts
+- products
+- sessions
+- shop
+- users
