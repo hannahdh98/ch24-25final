@@ -1,5 +1,7 @@
+//import
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+//new schema
 const postSchema = new Schema(
     {
         title: {
