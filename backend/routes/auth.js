@@ -1,14 +1,12 @@
+//imports
 const express = require('express');
 const { body } = require('express-validator/check');
-
 const User = require('../models/user');
 const authController = require('../controllers/auth');
-const isAuth = require('../middleware/is-auth');
 
 const router = express.Router();
 //this will check if users sign up credentials are valid.
-router.put(
-  '/signup',
+router.put('/signup',
   [
     body('email')
       .isEmail()
@@ -34,18 +32,5 @@ router.put(
 
 router.post('/login', authController.login);
 
-router.get('/status', isAuth, authController.getUserStatus);
-
-router.patch(
-  '/status',
-  isAuth,
-  [
-    body('status')
-      .trim()
-      .not()
-      .isEmpty()
-  ],
-  authController.updateUserStatus
-);
 //exports router
 module.exports = router;
