@@ -1,3 +1,4 @@
+//imports
 const fs = require('fs');
 const path = require('path');
 
@@ -193,6 +194,7 @@ exports.deletePost = (req, res, next) => {
     });
 };
 
+//deletes the image
 const clearImage = filePath => {
   filePath = path.join(__dirname, '..', filePath);
   fs.unlink(filePath, err => console.log(err));
